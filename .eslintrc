@@ -1,0 +1,68 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended",
+        "plugin:jsx-a11y/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings"
+      ],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module",
+        "ecmaFeatures": {
+          "jsx": true
+        },
+        "project": "./tsconfig.json"
+      },
+    "env": {
+        "browser": true,
+        "node": true,
+        "mocha": true,
+        "es6": true,
+        "jest": true,
+        "jquery": true
+    },
+    "rules": {
+        "import/prefer-default-export": "off",
+        "no-underscore-dangle": "off",
+        "space-before-function-paren": "off",
+        "react/forbid-prop-types": "off",
+        "react/prop-types": "off",
+        "react/prefer-stateless-function": "off",
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+        "linebreak-style": "off",
+        "global-require": "off",
+        "semi": "warn",
+        "arrow-body-style": "off",
+        "comma-dangle": "off",
+        "max-len":"off",
+        "react/jsx-closing-tag-location": "off",
+        "react/no-multi-comp": "off",
+        "jsx-a11y/label-has-for": [ 2, {
+            "components": [ "Label" ],
+            "required": {
+                "some": [ "nesting", "id" ]
+            },
+            "allowChildren": false
+        }],
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+              "js": "never",
+              "jsx": "never",
+              "ts": "never",
+              "tsx": "never"
+            }
+          ]
+    },
+    "settings": {
+        "import/resolver": {
+          "node": {
+            "extensions": [".js", ".jsx", ".ts", ".tsx"]
+          }
+        }
+      }
+}

@@ -1,0 +1,9 @@
+.VehicleList {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 481px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
